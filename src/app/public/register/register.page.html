@@ -1,0 +1,109 @@
+<ion-header >
+	<ion-toolbar>
+		<ion-buttons slot="start">
+		</ion-buttons>
+		<ion-title><ion-icon id="arrow" name="arrow-back-outline" routerLink="/home"></ion-icon></ion-title>
+	</ion-toolbar>
+</ion-header>
+  
+  <ion-content [fullscreen]="true">
+
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+				<form class="login100-form validate-form" [formGroup]="addUser">
+					<span class="login100-form-title p-b-49">
+            <div class="text-center">
+              <img src="../../../assets/image/Logo-Swapify.png" width="150px">
+            </div>					</span>
+
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+						<span class="label-input100">Nom et prénom</span>
+						<input formControlName="name" class="input100" type="text" name="username" placeholder="Entrer votre nom">
+           
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+						<span class="label-input100">Email</span>
+						<input formControlName="email" class="input100" type="text" name="username" placeholder="Entrer votre email">
+           
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+						<span class="label-input100">Numéro de tel</span>
+						<input formControlName="phone" class="input100" type="text" name="username" placeholder="Entrer votre numéro">
+           
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+						<span class="label-input100">Adresse</span>
+						<input formControlName="address" class="input100" type="text" name="username" placeholder="Entrer votre adresse">
+           
+					</div>
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+
+
+
+				  <ion-item id="birth-modal">
+					<ion-label>Date de naissance</ion-label>
+					<ion-note slot="end">{{date}}</ion-note>
+				  </ion-item>
+				  <ion-modal trigger="birth-modal" [cssClass]="'center'">
+					<ng-template>
+					  <ion-datetime
+						presentation="date"
+						[(ngModel)]="date" [ngModelOptions]="{standalone: true}"
+						size="cover"
+					  ></ion-datetime>
+					</ng-template>
+				  </ion-modal>
+
+</div>
+          <div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+						<span class="label-input100">Mot de passe</span>
+						<input formControlName="password" class="input100" type="password" name="username" placeholder="Entrer votre mot de passe">
+           
+					</div>
+
+          <div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+						<span class="label-input100">Confirmer mot de passe</span>
+						<input  class="input100" type="password" name="username" placeholder="confirmer votre mot de passe">
+           
+					</div>
+
+					<div class="text-right p-t-8 p-b-31">
+						<a routerLink="/login">
+							Vous avez un compte?
+						</a>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button  class="login100-form-btn" (click)="onSubmit()">
+								M'inscrire
+							</button>
+						</div>
+					</div>
+
+<!-- 					<div class="txt1 text-center p-t-55 p-b-20">
+						<span class="txt1 p-b-17">
+							Or Sign Up Using
+						</span>
+
+						<a href="#" class="txt2">
+							Sign Up
+						</a>
+					</div> -->
+
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+</ion-content>
+
